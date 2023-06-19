@@ -14,4 +14,4 @@ JOIN grades g
 ON g.grades_courses_id = c.courses_id
 JOIN students s
 ON s.students_id = g.grades_students_id
-ORDER BY IDStudent;
+ORDER BY IDstudent;

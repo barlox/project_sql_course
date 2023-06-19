@@ -18,8 +18,8 @@ CREATE TABLE professors (
 
 CREATE TABLE courses (
      courses_id INT NOT NULL AUTO_INCREMENT UNIQUE,
-     courses_name VARCHAR(50),
-     courses_room VARCHAR(50),
+     courses_name VARCHAR(50) NOT NULL UNIQUE,
+     courses_room VARCHAR(50) NOT NULL,
      courses_professors_id INT  NOT NULL,
      FOREIGN KEY (courses_professors_id) REFERENCES professors(professors_id),       
      PRIMARY KEY (courses_id)
@@ -36,7 +36,7 @@ CREATE TABLE students (
 
 CREATE TABLE grades (
      grades_id INT NOT NULL AUTO_INCREMENT UNIQUE,
-     grades_name VARCHAR(50),
+     grades_name VARCHAR(50) NOT NULL,
      grades_total INT,
      grades_courses_id INT  NOT NULL, 
      grades_students_id INT  NOT NULL,    
